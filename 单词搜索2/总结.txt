@@ -1,0 +1,8 @@
+我的思路是：在一遍之中找到一部分单词，递归每返回一个值，就从words中删除一个词，重复这个过程直到搜索不返回任何值
+问题：search2找到一个词就返回，效率很低，大量数据前十分致命
+改动措施：  
+1、DFS记录值，没有返回值,通过记录状态加速程序
+递归返回多个值时，要判断是否为False
+search[i] = ans.append(board[i][j]+search[i-1][j]).append(board[i][j]+search[i+1][j]).append(board[i][j]+search[i][j-1]).append(board[i][j]+search[i][j+1])
+
+
